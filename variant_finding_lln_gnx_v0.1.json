@@ -1,0 +1,486 @@
+[
+  {
+    "variant_finding": [
+      {
+        "name": "Snp Min Coverage",
+        "key": "vc.tvc.snp.min.coverage",
+        "value": "20"
+      },
+      {
+        "name": "Indel Min Variant Score",
+        "key": "vc.tvc.indel.min.variant.score",
+        "value": "30"
+      },
+      {
+        "name": "LOD Multiplier",
+        "key": "vc.tvc.lod.multiplier",
+        "value": ""
+      },
+      {
+        "name": "Indel Min Coverage",
+        "key": "vc.tvc.indel.min.coverage",
+        "value": "20"
+      },
+      {
+        "name": "MNP Strand Bias Pval",
+        "key": "vc.tvc.mnp.strand.bias.pval",
+        "value": "1.0"
+      },
+      {
+        "name": "Short Suffix Match",
+        "key": "vc.lia.short.suffix.match",
+        "value": "5"
+      },
+      {
+        "name": "Min Indel Size",
+        "key": "vc.lia.min.indel.size",
+        "value": "4"
+      },
+      {
+        "name": "Generate Min Coverage",
+        "key": "vc.fb.gen.min.coverage",
+        "value": "20"
+      },
+      {
+        "name": "Hotspot Min Cov Each Strand",
+        "key": "vc.tvc.hotspot.min.cov.each.strand",
+        "value": "2"
+      },
+      {
+        "name": "Min Detail Level for Fast Scan",
+        "key": "vc.tvc.min.detail.level.for.fast.scan",
+        "value": "0"
+      },
+      {
+        "name": "Suppress called allele lod",
+        "key": "vc.tvc.suppress.called.allele.lod",
+        "value": "0"
+      },
+      {
+        "name": "Hotspot Min Coverage",
+        "key": "vc.tvc.hotspot.min.coverage",
+        "value": "15"
+      },
+      {
+        "name": "PPA",
+        "key": "vc.tvc.report.ppa",
+        "value": "0"
+      },
+      {
+        "name": "Outlier Probability",
+        "key": "vc.tvc.outlier.probability",
+        "value": "0.005"
+      },
+      {
+        "name": "INDEL Min Var Coverage",
+        "key": "vc.tvc.indel.min.var.coverage",
+        "value": "2"
+      },
+      {
+        "name": "Mnp Min Cov Each Strand",
+        "key": "vc.tvc.mnp.min.cov.each.strand",
+        "value": "3"
+      },
+      {
+        "name": "Mnp Min Coverage",
+        "key": "vc.tvc.mnp.min.coverage",
+        "value": "20"
+      },
+      {
+        "name": "Hotspot Only",
+        "key": "vc.tvc.hotspot.positions.only",
+        "value": "0"
+      },
+      {
+        "name": "Relative Strand Bias",
+        "key": "vc.lia.relative.strand.bias",
+        "value": "0.8"
+      },
+      {
+        "name": "Use position bias",
+        "key": "vc.tvc.use.position.bias",
+        "value": "1"
+      },
+      {
+        "name": "Read Max Mismatch Fraction",
+        "key": "vc.fb.read.max.mismatch.fraction",
+        "value": "1.0"
+      },
+      {
+        "name": "SNP Strand Bias Pval",
+        "key": "vc.tvc.snp.strand.bias.pval",
+        "value": "1"
+      },
+      {
+        "name": "Use FD Parameters",
+        "key": "vc.tvc.use.fd.param",
+        "value": "0"
+      },
+      {
+        "name": "Max HP Length",
+        "key": "vc.lia.max.hp.length",
+        "value": "8"
+      },
+      {
+        "name": "Min Var Freq",
+        "key": "vc.lia.min.var.freq",
+        "value": "0.07"
+      },
+      {
+        "name": "Minimum Callable Probability",
+        "key": "vc.tvc.min.callable.prob",
+        "value": "0.98"
+      },
+      {
+        "name": "Variant View",
+        "key": "variant.view",
+        "value": "Allele"
+      },
+      {
+        "name": "Read SNP Limit",
+        "key": "vc.fb.read.snp.limit",
+        "value": "10"
+      },
+      {
+        "name": "Indel Min Allele Freq",
+        "key": "vc.tvc.indel.min.allele.freq",
+        "value": "0.1"
+      },
+      {
+        "name": "Position Bias Pvalue",
+        "key": "vc.tvc.position.bias.pval",
+        "value": "0.05"
+      },
+      {
+        "name": "FD Nonsnp Min Var Cov",
+        "key": "vc.tvc.fd.nonsnp.min.var.cov",
+        "value": "1"
+      },
+      {
+        "name": "Hotspot Strand Bias",
+        "key": "vc.tvc.hotspot.strand.bias",
+        "value": "0.96"
+      },
+      {
+        "name": "Snp Min Variant Score",
+        "key": "vc.tvc.snp.min.variant.score",
+        "value": "10"
+      },
+      {
+        "name": "Min Family Size",
+        "key": "vc.tvc.min.tag.fam.size",
+        "value": "3"
+      },
+      {
+        "name": "Allow MNPs",
+        "key": "vc.fb.allow.mnps",
+        "value": "1"
+      },
+      {
+        "name": "Min Var Count",
+        "key": "vc.lia.min.var.count",
+        "value": "5"
+      },
+      {
+        "name": "Number of Evaluated Frequencies for a Given Hypothesis",
+        "key": "vc.tvc.max.detail.level",
+        "value": "0"
+      },
+      {
+        "name": "Try Few Restart Freq",
+        "key": "vc.tvc.try.few.restart.freq",
+        "value": "0"
+      },
+      {
+        "name": "Mnp Min Variant Score",
+        "key": "vc.tvc.mnp.min.variant.score",
+        "value": "10"
+      },
+      {
+        "name": "Use Input Allele Only",
+        "key": "vc.fb.use.input.allele.only",
+        "value": "0"
+      },
+      {
+        "name": "Filter By Target",
+        "key": "vc.tvc.filter.by.target",
+        "value": "0"
+      },
+      {
+        "name": "Filter Deletion Predictions",
+        "key": "vc.tvc.filter.deletion.predictions",
+        "value": "0.2"
+      },
+      {
+        "name": "MNP Strand Bias",
+        "key": "vc.tvc.mnp.strand.bias",
+        "value": "0.9"
+      },
+      {
+        "name": "Read Mismatch Limit",
+        "key": "vc.fb.read.mismatch.limit",
+        "value": "0"
+      },
+      {
+        "name": "Path to TVCUTILS",
+        "key": "vc.tvc.tvcutils.executable.path",
+        "value": ""
+      },
+      {
+        "name": "Use LOD Filter",
+        "key": "vc.tvc.use.lod.filter",
+        "value": "0"
+      },
+      {
+        "name": "Path to TVC",
+        "key": "vc.tvc.tvc.executable.path",
+        "value": ""
+      },
+      {
+        "name": "Indel Min Cov Each Strand",
+        "key": "vc.tvc.indel.min.cov.each.strand",
+        "value": "3"
+      },
+      {
+        "name": "Output MNV",
+        "key": "vc.lia.output.mnv",
+        "value": "0"
+      },
+      {
+        "name": "Filter Unusual Predictions",
+        "key": "vc.tvc.filter.unusual.predictions",
+        "value": "0.25"
+      },
+      {
+        "name": "Generate Min Alt Allele Freq",
+        "key": "vc.fb.gen.min.alt.allele.freq",
+        "value": "0.02"
+      },
+      {
+        "name": "Position Bias Reference Fraction",
+        "key": "vc.tvc.position.bias.ref.fraction",
+        "value": "0.05"
+      },
+      {
+        "name": "Downsample To Coverage",
+        "key": "vc.tvc.downsample.to.coverage",
+        "value": "2000"
+      },
+      {
+        "name": "Do SNP Realignment",
+        "key": "vc.tvc.do.snp.realignment",
+        "value": "0"
+      },
+      {
+        "name": "SSE Probability Threshold",
+        "key": "vc.tvc.sse.prob.threshold",
+        "value": "1"
+      },
+      {
+        "name": "Hotspot Strand Bias Pval",
+        "key": "vc.tvc.hotspot.strand.bias.pval",
+        "value": "1.0"
+      },
+      {
+        "name": "Indel Strand Bias",
+        "key": "vc.tvc.indel.strand.bias",
+        "value": "0.85"
+      },
+      {
+        "name": "Tag Trim Method",
+        "key": "vc.tvc.tag.trim.method",
+        "value": ""
+      },
+      {
+        "name": "Hotspot Min Variant Score",
+        "key": "vc.tvc.hotspot.min.variant.score",
+        "value": "6"
+      },
+      {
+        "name": "Additional advanced variant caller arguments",
+        "key": "vc.m.tvcargs",
+        "value": ""
+      },
+      {
+        "name": "Suppress Molecular Tags",
+        "key": "vc.tvc.suppress.mol.tags",
+        "value": "0"
+      },
+      {
+        "name": "Allow Indels",
+        "key": "vc.fb.allow.indels",
+        "value": "1"
+      },
+      {
+        "name": "Analysis Sample Relation",
+        "key": "analysis.sample.relation",
+        "value": "DNA"
+      },
+      {
+        "name": "Mnp Min Allele Freq",
+        "key": "vc.tvc.mnp.min.allele.freq",
+        "value": "0.025"
+      },
+      {
+        "name": "INDEL Strand Bias Pval",
+        "key": "vc.tvc.indel.strand.bias.pval",
+        "value": "1.0"
+      },
+      {
+        "name": "Error Motifs",
+        "key": "vc.tvc.error.motifs",
+        "value": ""
+      },
+      {
+        "name": "Run Consensus",
+        "key": "vc.tvc.run.consensus",
+        "value": "1"
+      },
+      {
+        "name": "Indel As HPindel",
+        "key": "vc.tvc.indel.as.hpindel",
+        "value": "0"
+      },
+      {
+        "name": "Minimum mapping qv",
+        "key": "vc.fb.min.mapping.qv",
+        "value": "4"
+      },
+      {
+        "name": "Snp Min Allele Freq",
+        "key": "vc.tvc.snp.min.allele.freq",
+        "value": "0.025"
+      },
+      {
+        "name": "Realignment Threshold",
+        "key": "vc.tvc.realignment.threshold",
+        "value": "0"
+      },
+      {
+        "name": "Hotspot Allele Only",
+        "key": "vc.tvc.hotspot.allele.only",
+        "value": "0"
+      },
+      {
+        "name": "Additional advanced unify arguments",
+        "key": "vc.m.unifyargs",
+        "value": ""
+      },
+      {
+        "name": "Do MNP Realignment",
+        "key": "vc.tvc.do.mnp.realignment",
+        "value": "1"
+      },
+      {
+        "name": "Indel Func Size Offset",
+        "key": "vc.tvc.indel.func.size.offset",
+        "value": "2"
+      },
+      {
+        "name": "Hotspot Min Var Coverage",
+        "key": "vc.tvc.hotspot.min.var.coverage",
+        "value": "10"
+      },
+      {
+        "name": "Generate Min Indel Alt Allele Freq",
+        "key": "vc.fb.gen.min.indel.alt.allele.freq",
+        "value": "0.1"
+      },
+      {
+        "name": "Data Quality Stringency",
+        "key": "vc.tvc.data.quality.stringency",
+        "value": "10"
+      },
+      {
+        "name": "SNP Strand Bias",
+        "key": "vc.tvc.snp.strand.bias",
+        "value": "0.9"
+      },
+      {
+        "name": "Suppress Recalibration",
+        "key": "vc.tvc.suppress.recalibration",
+        "value": "0"
+      },
+      {
+        "name": "HP Max Length",
+        "key": "vc.tvc.hp.max.length",
+        "value": "8"
+      },
+      {
+        "name": "Prediction Precision",
+        "key": "vc.tvc.prediction.precision",
+        "value": "1.0"
+      },
+      {
+        "name": "SNP Min Var Coverage",
+        "key": "vc.tvc.snp.min.var.coverage",
+        "value": "2"
+      },
+      {
+        "name": "Heavy Tailed",
+        "key": "vc.tvc.heavy.tailed",
+        "value": "3"
+      },
+      {
+        "name": "Hotspot Min Allele Freq",
+        "key": "vc.tvc.hotspot.min.allele.freq",
+        "value": "0.025"
+      },
+      {
+        "name": "TagSeq Custom Gene Ruleset",
+        "key": "vc.tvc.tag.custom.gene.ruleset",
+        "value": ""
+      },
+      {
+        "name": "Minimum Family Coverage per Strand",
+        "key": "vc.tvc.min.fam.per.strand.cov",
+        "value": "0"
+      },
+      {
+        "name": "Allow Complex",
+        "key": "vc.fb.allow.complex",
+        "value": "1"
+      },
+      {
+        "name": "MNP Min Var Coverage",
+        "key": "vc.tvc.mnp.min.var.coverage",
+        "value": "10"
+      },
+      {
+        "name": "Filter Insertion Predictions",
+        "key": "vc.tvc.filter.insertion.predictions",
+        "value": "0.2"
+      },
+      {
+        "name": "Tag Sim Max Cov",
+        "key": "vc.tvc.tag.sim.max.cov",
+        "value": "20"
+      },
+      {
+        "name": "Snp Min Cov Each Strand",
+        "key": "vc.tvc.snp.min.cov.each.strand",
+        "value": "3"
+      },
+      {
+        "name": "Kmer Len",
+        "key": "vc.lia.kmer.len",
+        "value": "19"
+      },
+      {
+        "name": "Position Bias",
+        "key": "vc.tvc.position.bias",
+        "value": "0.78"
+      },
+      {
+        "name": "Min Cov Fraction",
+        "key": "vc.fb.min.cov.fraction",
+        "value": "0"
+      },
+      {
+        "name": "Allow SNPs",
+        "key": "vc.fb.allow.snps",
+        "value": "1"
+      }
+    ]
+  }
+]
