@@ -254,7 +254,7 @@
       {
         "name": "Generate Min Alt Allele Freq",
         "key": "vc.fb.gen.min.alt.allele.freq",
-        "value": "0.02"
+        "value": "0.03"
       },
       {
         "name": "Position Bias Reference Fraction",
@@ -344,7 +344,7 @@
       {
         "name": "Minimum mapping qv",
         "key": "vc.fb.min.mapping.qv",
-        "value": "4"
+        "value": "5"
       },
       {
         "name": "Snp Min Allele Freq",
@@ -384,12 +384,12 @@
       {
         "name": "Generate Min Indel Alt Allele Freq",
         "key": "vc.fb.gen.min.indel.alt.allele.freq",
-        "value": "0.1"
+        "value": "0.05"
       },
       {
         "name": "Data Quality Stringency",
         "key": "vc.tvc.data.quality.stringency",
-        "value": "10"
+        "value": "13"
       },
       {
         "name": "SNP Strand Bias",
