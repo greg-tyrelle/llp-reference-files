@@ -1,4 +1,4 @@
-track name="hotspot" type=bedDetail allowBlockSubstitutions=true CHEM="Ion AmpliSeq GenePanel" chipType="520"
+track name="hotspot" type=bedDetail allowBlockSubstitutions=true CHEM="Ion AmpliSeq GenePanel" chipType=""
 chr1	2488070	2488073	svb00001	REF=TGG;OBS=TG;BSTRAND=Ss0.083333:0.103448	+
 chr1	2488071	2488072	svb00002	REF=G;OBS=T;BSTRAND=Ss0.041667:0.051724	+
 chr1	2488071	2488073	svb00003	REF=GG;OBS=;BSTRAND=Ss0.083333:0.103448	+
