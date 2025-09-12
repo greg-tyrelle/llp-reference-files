@@ -78,7 +78,7 @@
         "allow_snps": 1,
         "gen_min_alt_allele_freq": 0.03,
         "gen_min_coverage": 5,
-        "gen_min_indel_alt_allele_freq": 0.05,
+        "gen_min_indel_alt_allele_freq": 0.03,
         "min_mapping_qv": 5,
         "read_max_mismatch_fraction": 1.0,
         "read_snp_limit": 10

@@ -1,0 +1,29 @@
+[TYPE]: Brief description of parameter change
+
+Parameter: [parameter_name]
+Old value: [previous_value]
+New value: [new_value]
+Rationale: [why_this_change_was_made]
+Validated by: [reviewer_initials]
+References: [JIRA_IDs] 
+Date changed: [YYYY-MM-DD]
+
+Impact analysis:
+- Description: [description_of_the_changes]
+- Expected sensitivity change: [increase/decrease/minimal]
+- Expected specificity change: [increase/decrease/minimal]
+- Affected variant types: [SNVs/indels/CNVs/all]
+- Panel version: [panel_version]
+
+Testing notes:
+- Validation cohort: [sample_set_or_reference]
+- Test results: [brief_summary_of_validation]
+- Performance metrics: [before/after comparison]
+
+# Parameter Change Types [PARAMETER + TYPE]:
+# OPTIMIZE: Parameter optimization for better performance
+# RELAX: Lower stringency for increased sensitivity  
+# TIGHTEN: Higher stringency for increased specificity
+# CORRECT: Fix incorrect parameter value
+# UPDATE: Version-driven parameter update
+# RELEASE: Version release/tagging
