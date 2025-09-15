@@ -1,4 +1,4 @@
-[TYPE]: Brief description of parameter change
+[PARAMETER + COMMIT TYPE]: Brief description of parameter change
 
 Parameter: [parameter_name]
 Old value: [previous_value]
@@ -20,7 +20,7 @@ Testing notes:
 - Test results: [brief_summary_of_validation]
 - Performance metrics: [before/after comparison]
 
-# Parameter Change Types [PARAMETER + TYPE]:
+# Parameter Change Types [PARAMETER + COMMIT TYPE]:
 # OPTIMIZE: Parameter optimization for better performance
 # RELAX: Lower stringency for increased sensitivity  
 # TIGHTEN: Higher stringency for increased specificity

@@ -12,16 +12,15 @@ echo "" >> "$OUTPUT_FILE"
 # Recent Changes Section
 echo "## Recent Changes (Last 20 commits)" >> "$OUTPUT_FILE"
 echo "" >> "$OUTPUT_FILE"
-git log --oneline --grep="ADD:" --grep="REMOVE:" --grep="MODIFY:" --grep="OPTIMIZE:" --grep="RELAX:" --grep="TIGHTEN:" --grep="CORRECT:" --grep="UPDATE:" --grep="VALIDATE:" --grep="RELEASE:" \
+git log --oneline --grep="SVB ADD:" --grep="SVB REMOVE:" --grep="SVB MODIFY:" --grep="SVB VALIDATE:" --grep="PARAMETER OPTIMIZE:" --grep="PARAMETER RELAX:" --grep="PARAMETER TIGHTEN:" --grep="PARAMETER CORRECT:" --grep="PARAMETER UPDATE:" --grep="RELEASE:" \
     --format="### %s%n**Date:** %ad%n**Author:** %an%n%n%b%n---" --date=short -20 >> "$OUTPUT_FILE"
 
 echo "" >> "$OUTPUT_FILE"
 
 # Define categories and their patterns for detailed sections
 declare -A categories=(
-    ["SVB Filter Changes"]="ADD:|REMOVE:|MODIFY:"
-    ["Parameter Optimizations"]="OPTIMIZE:|RELAX:|TIGHTEN:|CORRECT:|UPDATE:"
-    ["Validation Studies"]="VALIDATE:"
+    ["SVB Filter Changes"]="SVB ADD:|SVB REMOVE:|SVB MODIFY:|SVB VALIDATE:"
+    ["Parameter Optimizations"]="PARAMETER OPTIMIZE:|PARAMETER RELAX:|PARAMETER TIGHTEN:|PARAMETER CORRECT:|PARAMETER UPDATE:"
     ["Release Management"]="RELEASE:"
     ["Documentation Updates"]="DOC:|README"
 )
@@ -44,9 +43,11 @@ done
 # Statistics Section  
 echo "## Repository Statistics" >> "$OUTPUT_FILE"
 echo "" >> "$OUTPUT_FILE"
-echo "- **SVB filters added:** $(git log --oneline --grep="ADD:" | wc -l)" >> "$OUTPUT_FILE"
-echo "- **SVB filters removed:** $(git log --oneline --grep="REMOVE:" | wc -l)" >> "$OUTPUT_FILE"
-echo "- **Parameter changes:** $(git log --oneline --grep="OPTIMIZE:\|RELAX:\|TIGHTEN:\|CORRECT:\|UPDATE:" | wc -l)" >> "$OUTPUT_FILE"
+echo "- **SVB filters added:** $(git log --oneline --grep="SVB ADD:" | wc -l)" >> "$OUTPUT_FILE"
+echo "- **SVB filters removed:** $(git log --oneline --grep="SVB REMOVE:" | wc -l)" >> "$OUTPUT_FILE"
+echo "- **SVB filters modified:** $(git log --oneline --grep="SVB MODIFY:" | wc -l)" >> "$OUTPUT_FILE"
+echo "- **Parameter optimizations:** $(git log --oneline --grep="PARAMETER OPTIMIZE:\|PARAMETER RELAX:\|PARAMETER TIGHTEN:\|PARAMETER CORRECT:\|PARAMETER UPDATE:" | wc -l)" >> "$OUTPUT_FILE"
+echo "- **Validation studies:** $(git log --oneline --grep="SVB VALIDATE:\|PARAMETER VALIDATE:" | wc -l)" >> "$OUTPUT_FILE"
 echo "- **Total releases:** $(git tag 2>/dev/null | wc -l)" >> "$OUTPUT_FILE"
 echo "- **Last updated:** $(date)" >> "$OUTPUT_FILE"
 
