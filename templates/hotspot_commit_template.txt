@@ -1,0 +1,29 @@
+[HOTSPOT + COMMIT TYPE]: Brief description of hotspot change
+
+Locus: [chromosome:position or gene name]
+Variant Type: [SNV/INDEL/MNV/Structural/etc.]
+Change Details: [What specifically changed - added/removed/modified coordinates, etc.]
+Rationale: [Why this change was needed]
+Validated by: [reviewer_initials]
+References: [JIRA_IDs]
+Date changed: [YYYY-MM-DD]
+
+Impact analysis:
+- Coverage change: [increase/decrease/none]
+- Sensitivity change: [expected impact on variant detection]
+- Specificity change: [expected impact on false positives]
+- Affected genes: [list of genes impacted]
+- Panel version: [panel_version]
+
+Testing notes:
+- Validation cohort: [sample set used for validation]
+- Test results: [brief summary of validation results]
+- Performance metrics: [any relevant metrics or comparisons]
+- References: [literature/internal studies supporting change]
+
+# Hotspot Commit Types [HOTSPOT + COMMIT TYPE]:
+# ADD: Adding new hotspot region or variant
+# REMOVE: Removing hotspot region or variant
+# MODIFY: Modifying existing hotspot coordinates/parameters
+# UPDATE: Updating hotspot annotations or metadata
+# RESTRUCTURE: Major reorganization of hotspot file structure

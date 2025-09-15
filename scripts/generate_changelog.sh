@@ -12,33 +12,34 @@ echo "" >> "$OUTPUT_FILE"
 # Recent Changes Section
 echo "## Recent Changes (Last 20 commits)" >> "$OUTPUT_FILE"
 echo "" >> "$OUTPUT_FILE"
-git log --oneline --grep="SVB ADD:" --grep="SVB REMOVE:" --grep="SVB MODIFY:" --grep="SVB VALIDATE:" --grep="PARAMETER OPTIMIZE:" --grep="PARAMETER RELAX:" --grep="PARAMETER TIGHTEN:" --grep="PARAMETER CORRECT:" --grep="PARAMETER UPDATE:" --grep="RELEASE:" \
+git log --oneline --grep="SVB ADD:" --grep="SVB REMOVE:" --grep="SVB MODIFY:" --grep="SVB VALIDATE:" --grep="PARAMETER OPTIMIZE:" --grep="PARAMETER RELAX:" --grep="PARAMETER TIGHTEN:" --grep="PARAMETER CORRECT:" --grep="PARAMETER UPDATE:" --grep="HOTSPOT ADD:" --grep="HOTSPOT REMOVE:" --grep="HOTSPOT MODIFY:" --grep="HOTSPOT UPDATE:" --grep="HOTSPOT RESTRUCTURE:" --grep="RELEASE:" \
     --format="### %s%n**Date:** %ad%n**Author:** %an%n%n%b%n---" --date=short -20 >> "$OUTPUT_FILE"
 
 echo "" >> "$OUTPUT_FILE"
 
-# Define categories and their patterns for detailed sections
-declare -A categories=(
-    ["SVB Filter Changes"]="SVB ADD:|SVB REMOVE:|SVB MODIFY:|SVB VALIDATE:"
-    ["Parameter Optimizations"]="PARAMETER OPTIMIZE:|PARAMETER RELAX:|PARAMETER TIGHTEN:|PARAMETER CORRECT:|PARAMETER UPDATE:"
-    ["Release Management"]="RELEASE:"
-    ["Documentation Updates"]="DOC:|README"
-)
-
-# Generate sections for each category
-for category in "${!categories[@]}"; do
-    pattern="${categories[$category]}"
-    echo "## $category" >> "$OUTPUT_FILE"
+# Function to generate category sections (compatible with older bash)
+generate_category_section() {
+    local display_name="$1"
+    local pattern="$2"
+    
+    echo "## $display_name" >> "$OUTPUT_FILE"
     echo "" >> "$OUTPUT_FILE"
     
     # Get commits matching this category
-    if git log --grep="$(echo $pattern | tr '|' '\n' | head -1)" --oneline | head -1 > /dev/null 2>&1; then
+    if git log --grep="$(echo $pattern | cut -d'|' -f1)" --oneline | head -1 > /dev/null 2>&1; then
         git log --grep="$pattern" --extended-regexp --format="### %s%n**Date:** %ad | **Author:** %an%n%n%b%n---" --date=short -10 >> "$OUTPUT_FILE"
     else
         echo "*No commits found for this category.*" >> "$OUTPUT_FILE"
     fi
     echo "" >> "$OUTPUT_FILE"
-done
+}
+
+# Generate sections for each category
+generate_category_section "SVB Filter Changes" "SVB ADD:|SVB REMOVE:|SVB MODIFY:|SVB VALIDATE:"
+generate_category_section "Parameter Optimizations" "PARAMETER OPTIMIZE:|PARAMETER RELAX:|PARAMETER TIGHTEN:|PARAMETER CORRECT:|PARAMETER UPDATE:"
+generate_category_section "Hotspot Management" "HOTSPOT ADD:|HOTSPOT REMOVE:|HOTSPOT MODIFY:|HOTSPOT UPDATE:|HOTSPOT RESTRUCTURE:"
+generate_category_section "Release Management" "RELEASE:"
+generate_category_section "Documentation Updates" "DOC:|README"
 
 # Statistics Section  
 echo "## Repository Statistics" >> "$OUTPUT_FILE"
@@ -47,6 +48,7 @@ echo "- **SVB filters added:** $(git log --oneline --grep="SVB ADD:" | wc -l)" >
 echo "- **SVB filters removed:** $(git log --oneline --grep="SVB REMOVE:" | wc -l)" >> "$OUTPUT_FILE"
 echo "- **SVB filters modified:** $(git log --oneline --grep="SVB MODIFY:" | wc -l)" >> "$OUTPUT_FILE"
 echo "- **Parameter optimizations:** $(git log --oneline --grep="PARAMETER OPTIMIZE:\|PARAMETER RELAX:\|PARAMETER TIGHTEN:\|PARAMETER CORRECT:\|PARAMETER UPDATE:" | wc -l)" >> "$OUTPUT_FILE"
+echo "- **Hotspot changes:** $(git log --oneline --grep="HOTSPOT ADD:\|HOTSPOT REMOVE:\|HOTSPOT MODIFY:\|HOTSPOT UPDATE:\|HOTSPOT RESTRUCTURE:" | wc -l)" >> "$OUTPUT_FILE"
 echo "- **Validation studies:** $(git log --oneline --grep="SVB VALIDATE:\|PARAMETER VALIDATE:" | wc -l)" >> "$OUTPUT_FILE"
 echo "- **Total releases:** $(git tag 2>/dev/null | wc -l)" >> "$OUTPUT_FILE"
 echo "- **Last updated:** $(date)" >> "$OUTPUT_FILE"
