@@ -1,8 +1,9 @@
-[TYPE]: Brief description
+[SVB + COMMIT TYPE]: Brief description
 
 Sample ID: [sample_id_list]
 Position: [genomic_position_or_variant]
 Rationale: [why_this_change_was_made]
+References: [JIRA_IDs]
 Validated by: [reviewer_initials]
 Date discovered: [YYYY-MM-DD]
 
@@ -12,7 +13,7 @@ Additional context:
 - Caller artifacts: [specific_technical_issue]
 - References: [literature_or_internal_refs]
 
-# SVB Commit Types:
+# SVB Commit Types [SVB + COMMIT TYPE]:
 # ADD: New filter entry added
 # REMOVE: Filter entry removed  
 # MODIFY: Existing filter modified
