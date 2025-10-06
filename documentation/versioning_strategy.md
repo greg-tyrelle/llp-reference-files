@@ -93,21 +93,38 @@ git tag -a v1.1 -m "LLP Panel v1.1 - Optimized indel parameters, added 3 SVB fil
 
 ## Release Process
 
-### For Incremental Updates
-1. Archive current version files
-2. Update current files with new parameters/filters
-3. Commit with structured message using template
-4. Test on validation cohort
-5. Tag release
-6. Update documentation
+### Overview
+Releases provide validated snapshots of configuration files for distribution to downstream teams.
+Individual file versions may be asynchronous (e.g., SVB v1.2, Hotspot v1.1), but releases coordinate them into a unified package.
 
-### For Major Updates  
+### Release Creation Workflow
+
+**For Incremental Updates (v1.1, v1.2, etc.):**
+1. Make changes to configuration files (SVB, hotspot, parameters, design)
+2. Archive previous version and commit with structured message
+3. Accumulate changes as needed
+4. When ready for release:
+   ```bash
+   ./scripts/create_release_package.sh v1.1
+   ./scripts/validate_release.sh v1.1  # optional
+   git tag -a release-v1.1 -m "Release v1.1: [description]"
+   git push origin release-v1.1
+   ```
+5. Upload Release-v1.1.zip to GitHub Releases
+6. Notify downstream teams
+
+**For Major Updates (v2.0, v3.0, etc.):**  
 1. Create new panel directory (e.g., `panel_v2/`)
 2. Copy and modify all configuration files
 3. Update documentation
-4. Commit and tag major release
-5. Comprehensive validation study
-6. Update pipeline configurations
+4. Follow incremental release workflow
+5. Tag as release-v2.0
+
+### Release Decisions
+- **Cadence:** On-demand (no fixed schedule)
+- **Validation:** No formal protocol currently
+- **Storage:** GitHub Releases
+- **Baseline:** Historical initial commit = release-v1.0
 
 ## Documentation Structure
 
