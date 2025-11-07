@@ -1,6 +1,6 @@
 {
     "meta": {
-        "name": "Liverpool Lymphoid Network Panel TSS & IR paramters",
+        "name": "Liverpool Lymphoid Network Panel Variant Caller paramters",
         "tooltip": "",
         "configuration": "ampliseq_llp",
         "ts_version": "",
